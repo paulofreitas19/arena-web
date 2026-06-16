@@ -1,0 +1,102 @@
+<!DOCTYPE html> <!-- Esse é um documento HTML 5 -->
+<html lang="pt-BR"> <!-- A lingua principal é português do Brasil  -->
+
+<head> <!-- Aqui fica as configurações da página  -->
+    <meta charset="UTF-8"> <!-- A página passa a trablhar com acentos e caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Preparando a página para melhorar a responsividade para os diversos dispositivos que existem -->
+    <title>Arena</title> <!-- Texto que fica na aba do site -->
+
+    <link rel="stylesheet" href="./src/css/style.css">
+
+</head>
+
+<body> <!-- É todo o conteúdo visível da página  -->
+    <main class="container-principal">
+        <section class="tela tela-apresentacao">
+            <div class="apresentacao-conteudo">
+                <p class="etiqueta-projeto">Projeto HTML, CSS e JavaScript</p>
+
+                <h1 class="titulo-principal">Arena</h1>
+
+                <p class="descricao">Escolha seu jogador, conheça seus atributos e entre na arena para travar batalhas
+                    épicas contra adversários poderosos. Use ataques, habilidades especiais e estratégias de defesa para
+                    provar quem é o verdadeiro campeão.</p>
+
+                <button class="botao" id="botao-iniciar" type="button">Iniciar</button>
+            </div>
+
+            <div class="apresentacao-visual">
+                <img src="/src/img/img-personagens.png" alt="" class="imagem-personagens">
+            </div>
+        </section>
+
+        <section class="tela tela-selecao">
+            <div class="cabecalho">
+                <p class="cta">Selecione um personagem</p>
+
+                <button class="botao" id="botao-selecionar" type="button">Selecionar
+                </button>
+            </div>
+
+            <div class="container-selecao">
+                <div class="carta-personagem agente" id="carta-personagem">
+
+                </div>
+
+                <div class="carta-personagem caipira" id="carta-personagem">
+
+                </div>
+
+                <div class="carta-personagem mafioso" id="carta-personagem">
+
+                </div>
+
+                <div class="carta-personagem cyborgue" id="carta-personagem">
+
+                </div>
+
+                <div class="carta-personagem yakuza" id="carta-personagem">
+
+                </div>
+
+                <div class="carta-personagem punk" id="carta-personagem">
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="tela tela-confirmacao ativa">
+            <div class="confirmacao-visual">
+                <img src="./src/img/agent.png" alt="Personagem selecionado" class="imagem-personagem-confirmado" id="imagem-personagem-confirmado">
+            </div>
+
+            <div class="confirmacao-conteudo">
+                <h2 class="personagem-nome" id="personagem-nome">Agent Smith</h2>
+
+                <p class="personagem-descricao" id="personagem-descricao">
+                    Agent Smith é um personagem frio, calculista e implacável. Com força sobre-humana, reflexos rápidos e habilidade de duplicação, ele domina a arena pressionando seus adversários sem dar espaço para reação. Ideal para jogadores que gostam de controle, estratégia e ataques precisos.
+                </p>
+
+                <div class="painel-atributos">
+                    <div class="atributo atributo-ataque" id="atributo-ataque">
+                        <span class="atributo-nome">Ataque</span>
+
+                        <div class="barra-preenchimento">
+                            <div class="barra-ataque" id="barra-ataque"></div>
+                        </div>
+
+                        <span class="atributo-valor" id="atributo-valor">8</span>
+                    </div>
+                </div>
+
+                <button class="botao" id="botao-confirmar" type="button">
+                    Confirmar
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
