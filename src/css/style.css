@@ -1,13 +1,14 @@
 /* RESET */
 
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-body{
-    min-height: 100vh; /* garantir que a altura da seção principal, ocupe toda a altura da tela */
+body {
+    min-height: 100vh;
+    /* garantir que a altura da seção principal, ocupe toda a altura da tela */
 
     background-color: #171717;
     color: #fff;
@@ -18,64 +19,65 @@ body{
 /* RESET */
 
 
-.container-principal{
+.container-principal {
     width: 100%;
 
-    display: flex; /* permitir que o conteúdo seja centralizado de forma inteligente*/
-    justify-content: center; 
-    align-items: center; 
+    display: flex;
+    /* permitir que o conteúdo seja centralizado de forma inteligente*/
+    justify-content: center;
+    align-items: center;
 }
 
 /* TELA DE APRESENTAÇÃO */
 
-.tela{
+.tela {
     display: none;
     min-height: 100vh;
     width: 100%;
 
 }
 
-.tela.ativa{
+.tela.ativa {
     display: flex;
 }
 
-.tela-apresentacao{
+.tela-apresentacao {
     min-height: 100vh;
     max-width: 1400px;
 
     align-items: center;
 }
 
-.apresentacao-conteudo{
+.apresentacao-conteudo {
     width: 45%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; 
+    gap: 20px;
 }
 
-.etiqueta-projeto{
+.etiqueta-projeto {
     color: #E78930;
 
     font-size: 20px;
     font-weight: 700;
 }
 
-.titulo-principal{
+.titulo-principal {
     font-family: 'urban jungle';
     font-size: 140px;
 
     margin-bottom: 22px;
 }
 
-.descricao{
+.descricao {
     text-align: center;
 
     margin-bottom: 8px;
 }
 
-.botao{
+.botao {
     background-color: #9e5817;
     color: #171717;
 
@@ -88,7 +90,7 @@ body{
     transition: 0.3s;
 }
 
-.botao:hover{
+.botao:hover {
     background-color: #E78930;
 
     scale: 1.05;
@@ -98,7 +100,7 @@ body{
 
 /* TELA DE SELEÇÃO */
 
-.tela-selecao{
+.tela-selecao {
     width: 100%;
 
     flex-direction: column;
@@ -107,28 +109,28 @@ body{
 
 }
 
-.tela-selecao .cabecalho{
+.tela-selecao .cabecalho {
     width: 900px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    margin-top: 25px; 
+    margin-top: 25px;
 }
 
-.tela-selecao .cta{
+.tela-selecao .cta {
     font-size: 22px;
     font-weight: 600;
 }
 
-.container-selecao{
+.container-selecao {
     width: 980px;
 
     border-top: 4px solid #E78930;
     margin-top: 25px;
     padding-top: 30px;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,10 +138,10 @@ body{
     flex-wrap: wrap;
 }
 
-.carta-personagem{
+.carta-personagem {
     width: 250px;
     height: 308px;
-    
+
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.4;
@@ -148,7 +150,7 @@ body{
     transition: 0.3s;
 }
 
-.carta-personagem:hover{
+.carta-personagem:hover {
     opacity: 1;
     filter: grayscale(0);
     scale: 1.03;
@@ -156,7 +158,7 @@ body{
     outline-offset: 4px;
 }
 
-.carta-personagem.selecionada{
+.carta-personagem.selecionada {
     opacity: 1;
     filter: grayscale(0);
     scale: 1.03;
@@ -164,28 +166,65 @@ body{
     outline-offset: 4px;
 }
 
-.agente{
+.agente {
     background-image: url('../img/agent.png');
 }
 
-.caipira{
+.caipira {
     background-image: url('../img/caipira.png');
 }
 
-.cyborgue{
+.cyborgue {
     background-image: url('../img/cyborgue.png');
 }
 
-.mafioso{
+.mafioso {
     background-image: url('../img/mafia.png');
 }
 
-.punk{
+.punk {
     background-image: url('../img/punk.png');
 }
 
-.yakuza{
+.yakuza {
     background-image: url('../img/yakuza.png');
 }
 
 /* TELA DE SELEÇÃO */
+
+/* TELA DE CONFIRMAÇÃO */
+
+.tela-confirmacao {
+    width: 100%;
+    max-width: 1400px;
+    min-height: 100vh;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.confirmacao-visual {
+    position: relative;
+    width: 50%;
+}
+
+.imagem-personagem-confirmado {
+    height: 906px;
+    width: 680px;
+}
+
+.degrade{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #171717, rgba(0,0,0,0.01), #171717);
+    pointer-events: none;
+}
+
+.confirmacao-conteudo{
+    width: 50%;
+}
+
+/* TELA DE CONFIRMAÇÃO */

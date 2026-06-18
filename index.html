@@ -7,13 +7,12 @@
     <!-- Preparando a página para melhorar a responsividade para os diversos dispositivos que existem -->
     <title>Arena</title> <!-- Texto que fica na aba do site -->
 
-    <!-- <link rel="stylesheet" href="./src/css/style.css"> -->
-
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body> <!-- É todo o conteúdo visível da página  -->
     <main class="container-principal">
-        <section class="tela tela-apresentacao">
+        <section class="tela tela-apresentacao" id="tela-apresentacao">
             <div class="apresentacao-conteudo">
                 <p class="etiqueta-projeto">Projeto HTML, CSS e JavaScript</p>
 
@@ -31,7 +30,7 @@
             </div>
         </section>
 
-        <section class="tela tela-selecao">
+        <section class="tela tela-selecao" id="tela-selecao">
             <div class="cabecalho">
                 <p class="cta">Selecione um personagem</p>
 
@@ -67,31 +66,62 @@
             </div>
         </section>
 
-        <section class="tela tela-confirmacao ativa">
+        <section class="tela tela-confirmacao ativa" id="tela-confirmacao">
             <div class="confirmacao-visual">
                 <img src="./src/img/agent.png" alt="Personagem selecionado" class="imagem-personagem-confirmado" id="imagem-personagem-confirmado">
+                <div class="degrade"></div>
             </div>
 
             <div class="confirmacao-conteudo">
-                <h2 class="personagem-nome" id="personagem-nome">Agent Smith</h2>
+                <h2 class="nome-personagem-confirmado" id="nome-personagem-confirmado">Agent Smith</h2>
 
-                <p class="personagem-descricao" id="personagem-descricao">
+                <p class="descricao-personagem-confirmado" id="descricao-personagem-confirmado">
                     Agent Smith é um personagem frio, calculista e implacável. Com força sobre-humana, reflexos rápidos e habilidade de duplicação, ele domina a arena pressionando seus adversários sem dar espaço para reação. Ideal para jogadores que gostam de controle, estratégia e ataques precisos.
                 </p>
 
-                <div class="painel-atributos">
-                    <div class="atributo atributo-ataque" id="atributo-ataque">
+                <div class="painel-atributos-confirmacao">
+                    <div class="atributo linha-ataque">
                         <span class="atributo-nome">Ataque</span>
 
-                        <div class="barra-preenchimento">
-                            <div class="barra-ataque" id="barra-ataque"></div>
+                        <div class="barra-atributo">
+                            <div class="barra-preenchimento ataque" id="barra-ataque"></div>
                         </div>
 
-                        <span class="atributo-valor" id="atributo-valor">8</span>
+                        <span class="atributo-valor" id="valor-ataque">8</span>
+                    </div>
+
+                    <div class="atributo linha-defesa">
+                        <span class="atributo-nome">Defesa</span>
+
+                        <div class="barra-atributo">
+                            <div class="barra-preenchimento defesa" id="barra-defesa"></div>
+                        </div>
+
+                        <span class="atributo-valor" id="valor-defesa">8</span>
+                    </div>
+
+                    <div class="atributo linha-velocidade">
+                        <span class="atributo-nome">Velocidade</span>
+
+                        <div class="barra-atributo">
+                            <div class="barra-preenchimento velocidade" id="barra-velocidade"></div>
+                        </div>
+
+                        <span class="atributo-valor" id="valor-velocidade">8</span>
+                    </div>
+
+                    <div class="atributo linha-especial">
+                        <span class="atributo-nome">Especial</span>
+
+                        <div class="barra-atributo">
+                            <div class="barra-preenchimento especial" id="barra-especial"></div>
+                        </div>
+
+                        <span class="atributo-valor" id="valor-especial">8</span>
                     </div>
                 </div>
 
-                <button class="botao" id="botao-confirmar" type="button">
+                <button class="botao" id="botao-confirmar-personagem" type="button">
                     Confirmar
                 </button>
             </div>
