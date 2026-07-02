@@ -66,17 +66,19 @@
             </div>
         </section>
 
-        <section class="tela tela-confirmacao ativa" id="tela-confirmacao">
+        <section class="tela tela-confirmacao" id="tela-confirmacao">
             <div class="confirmacao-visual">
-                <img src="./src/img/agent.png" alt="Personagem selecionado" class="imagem-personagem-confirmado" id="imagem-personagem-confirmado">
-                <div class="degrade"></div>
+                <img src="./src/img/agent.png" alt="Personagem selecionado" class="imagem-personagem-confirmado"
+                    id="imagem-personagem-confirmado">
             </div>
 
             <div class="confirmacao-conteudo">
                 <h2 class="nome-personagem-confirmado" id="nome-personagem-confirmado">Agent Smith</h2>
 
                 <p class="descricao-personagem-confirmado" id="descricao-personagem-confirmado">
-                    Agent Smith é um personagem frio, calculista e implacável. Com força sobre-humana, reflexos rápidos e habilidade de duplicação, ele domina a arena pressionando seus adversários sem dar espaço para reação. Ideal para jogadores que gostam de controle, estratégia e ataques precisos.
+                    Agent Smith é um personagem frio, calculista e implacável. Com força sobre-humana, reflexos rápidos
+                    e habilidade de duplicação, ele domina a arena pressionando seus adversários sem dar espaço para
+                    reação. Ideal para jogadores que gostam de controle, estratégia e ataques precisos.
                 </p>
 
                 <div class="painel-atributos-confirmacao">
@@ -97,7 +99,7 @@
                             <div class="barra-preenchimento defesa" id="barra-defesa"></div>
                         </div>
 
-                        <span class="atributo-valor" id="valor-defesa">8</span>
+                        <span class="atributo-valor" id="valor-defesa">7</span>
                     </div>
 
                     <div class="atributo linha-velocidade">
@@ -107,7 +109,7 @@
                             <div class="barra-preenchimento velocidade" id="barra-velocidade"></div>
                         </div>
 
-                        <span class="atributo-valor" id="valor-velocidade">8</span>
+                        <span class="atributo-valor" id="valor-velocidade">9</span>
                     </div>
 
                     <div class="atributo linha-especial">
@@ -117,15 +119,135 @@
                             <div class="barra-preenchimento especial" id="barra-especial"></div>
                         </div>
 
-                        <span class="atributo-valor" id="valor-especial">8</span>
+                        <span class="atributo-valor" id="valor-especial">2</span>
                     </div>
-                </div>
 
-                <button class="botao" id="botao-confirmar-personagem" type="button">
-                    Confirmar
-                </button>
+                    <button class="botao" id="botao-confirmar-personagem" type="button">
+                        Confirmar
+                    </button>
+                </div>
             </div>
         </section>
+
+        <section class="tela tela-batalha ativa" id="tela-batalha">
+            <div class="conteudo-batalha">
+                <h2 class="titulo-batalha">Arena de Batalha</h2>
+
+                <div class="area-combatentes">
+
+                    <div class="card-combatente jogador">
+                        <div class="imagem-combatente">
+                            <img src="./src/img/agent.png" alt="Personagem escolhido" id="imagem-jogador-batalha">
+                        </div>
+
+                        <div class="informacoes-combatente">
+                            <p class="tipo-combatente">Jogador</p>
+
+                            <h3 class="nome-jogador-batalha">Agent Smith</h3>
+
+                            <p class="nivel-combatente">5</p>
+
+                            <div class="status-combatente">
+                                <div class="status-linha">
+                                    <span class="nome-status">Vida</span>
+
+                                    <div class="barra-status">
+                                        <div class="barra-vida jogador-vida" id="barra-vida-jogador"></div>
+                                    </div>
+
+                                    <span class="valor-status" id="valor-vida-jogador">30 / 100</span>
+                                </div>
+
+                                <div class="status-linha">
+                                    <span class="nome-status">Energia</span>
+
+                                    <div class="barra-status">
+                                        <div class="barra-energia jogador-energia" id="barra-energia-jogador"></div>
+                                    </div>
+
+                                    <span class="valor-status" id="valor-energia-jogador">60 / 100</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="versus-batalha">
+                        VS
+                    </div>
+
+                    <div class="card-combatente inimigo">
+                        <div class="informacoes-combatente">
+                            <p class="tipo-combatente">Inimigo</p>
+
+                            <h3 id="nome-inimigo-batalha">
+                                Isa Metralha
+                            </h3>
+
+                            <p class="nivel-combatente">
+                                Nível 10
+                            </p>
+
+                            <div class="status-combatente">
+                                <div class="status-linha">
+                                    <span class="nome-status">Vida</span>
+
+                                    <div class="barra-status">
+                                        <div class="barra-vida inimigo-vida" id="barra-vida-inimigo"></div>
+                                    </div>
+
+                                    <span class="status-valor" id="valor-vida-inimigo">
+                                        500 / 500
+                                    </span>
+                                </div>
+
+                                <div class="status-linha">
+                                    <span class="status-nome">Energia</span>
+
+                                    <div class="barra-status">
+                                        <div class="barra-energia inimigo-energia" id="barra-energia-inimigo"></div>
+                                    </div>
+
+                                    <span class="status-valor" id="valor-energia-inimigo">
+                                        100 / 100
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="imagem-combatente">
+                            <img src="./src/img/caipira.png" alt="Personagem inimigo" id="imagem-inimigo-batalha">
+                        </div>
+
+                    </div>
+
+                    <div class="log-batalha">
+                        <h3>Log da Batalha</h3>
+
+                        <ul class="lista-log">
+                            <li>Agent Smith usou o<span>Atacar</span> e causou 30 de dano.</li>
+
+                            <li>Isa Metralha usou o <span>Defender</span>e reduziu o dano.</li>
+
+                            <li>Agent Smith usou o <span>Especial</span> e causou um dano crítico.</li>
+
+                            <li>Isa Metralha está carregando uma Radouken!</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="acoes-batalha">
+                       <button class="botao-acao botao-atacar" id="botao-atacar" type="button">Atacar</button>
+
+                       <button class="botao-acao botao-defender" id="botao-defender" type="button">Defender</button>
+
+                       <button class="botao-acao botao-especial" id="botao-especial" type="button">Especial</button>
+                        
+                       <button class="botao-acao botao-reiniciar" id="botao-reiniciar" type="button">Reiniciar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 </body>
 

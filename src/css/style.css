@@ -58,7 +58,7 @@ body {
 }
 
 .etiqueta-projeto {
-    color: #E78930;
+    color: #575c49;
 
     font-size: 20px;
     font-weight: 700;
@@ -78,8 +78,8 @@ body {
 }
 
 .botao {
-    background-color: #9e5817;
-    color: #171717;
+    background-color: #575c49;
+    color: #ccc;
 
     padding: 10px 60px;
     border: none;
@@ -91,8 +91,8 @@ body {
 }
 
 .botao:hover {
-    background-color: #E78930;
-
+    background-color: #7c8266;
+    color: #fff;
     scale: 1.05;
 }
 
@@ -127,7 +127,7 @@ body {
 .container-selecao {
     width: 980px;
 
-    border-top: 4px solid #E78930;
+    border-top: 4px solid #575c49;
     margin-top: 25px;
     padding-top: 30px;
 
@@ -154,7 +154,7 @@ body {
     opacity: 1;
     filter: grayscale(0);
     scale: 1.03;
-    outline: 4px solid #E78930;
+    outline: 4px solid #575c49;
     outline-offset: 4px;
 }
 
@@ -162,7 +162,7 @@ body {
     opacity: 1;
     filter: grayscale(0);
     scale: 1.03;
-    outline: 4px solid #E78930;
+    outline: 4px solid #7c8266;
     outline-offset: 4px;
 }
 
@@ -195,36 +195,176 @@ body {
 /* TELA DE CONFIRMAÇÃO */
 
 .tela-confirmacao {
+    /* garante que a tela ocupa a largura total do navegador */
     width: 100%;
+
+    /* seta a largura máxima para não espalhar demais os elementos em telas grandes  */
     max-width: 1400px;
+
+    /* garante que a tela ocupe a altura total do navegador */
     min-height: 100vh;
 
+    /* para alinhar os blocos, posicionando um de cada lado */
     justify-content: space-between;
+
+    /* para centralizar os blocos verticalmente */
     align-items: center;
 }
 
 .confirmacao-visual {
+    /* faz com que a div se torne a referencia para a imagem que está dentro dela */
     position: relative;
+
+    /* define que a largura da div será metade da tela */
     width: 50%;
 }
 
-.imagem-personagem-confirmado {
-    height: 906px;
-    width: 680px;
-}
-
-.degrade{
+.confirmacao-visual::after {
+    /* posiciona o elemento de forma absoluta relativamente ao seu elemento pai */
     position: absolute;
-    top: 0;
-    left: 0;
+
+    /* o content é necessário para o after existir, mesmo que tenha que deixar as aspas vazia */
+    content: "";
+
+    /* seta right, left, top, bottom em 0, garantindo que o after ocupe todo o espaço do elemento pai */
+    inset: 0;
+
+    /* define a largura total disponível */
     width: 100%;
+
+    /* define a altura total disponível */
     height: 100%;
-    background: linear-gradient(90deg, #171717, rgba(0,0,0,0.01), #171717);
+
+    /* cria um degrade linear da esquerda para a direita horizontalmente */
+    background: linear-gradient(90deg, #171717, rgba(0, 0, 0, 0.01), #171717);
+
+    /* protege o elemento, fazendo com que o degrade não bloqueie o click do mouse  */
     pointer-events: none;
 }
 
-.confirmacao-conteudo{
-    width: 50%;
+.imagem-personagem-confirmado {
+    /* não deixar a imagem crescer demais e ficar cortada na tela*/
+    max-height: 100vh;
+
+    /* faz a imagem ficar contida dentro do espaço disponivel da div pai, sem perder a proporção original, protegendo a imagem de distorções */
+    object-fit: contain;
 }
+
+.confirmacao-conteudo {
+    /* define que o conteudo/lado direito, ocupe a metade da tela restante */
+    width: 50%;
+
+    /* para posicionar os elementos na tela com flexbox */
+    display: flex;
+
+    /* mudar a direção padrão(linha) para coluna */
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    /* alinhar o texto de forma centralizada */
+    text-align: center;
+}
+
+.nome-personagem-confirmado {
+    /* definir uma fonte e um fallback de fonte reserva */
+    font-family: 'doctor glitch', monospace;
+
+    /* definir o tamanho da fonte */
+    font-size: 38px;
+
+    /* deixar todas as letras em maiúsculo */
+    text-transform: uppercase;
+
+    /* criar espaçamento em baixo do nome */
+    margin-bottom: 20px;
+
+}
+
+.descricao-personagem-confirmado {
+    /* para melhorar a leitura do texto, linhas muito longas atrapalham a leitura */
+    max-width: 500px;
+
+    font-size: 18px;
+    line-height: 1.4;
+    color: #f1f1f1;
+
+    margin-bottom: 50px;
+}
+
+.painel-atributos-confirmacao {
+    max-width: 560px;
+
+    background-color: #282828;
+
+    padding: 38px 48px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    clip-path: polygon(5% 0,
+            95% 0,
+            100% 10%,
+            100% 90%,
+            95% 100%,
+            5% 100%,
+            0 90%,
+            0 10%);
+}
+
+.atributo {
+    display: grid;
+    grid-template-columns:100px 300px 40px;
+    gap: 18px;
+    align-items: center;
+}
+
+.atributo-nome,
+.atributo-valor {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.barra-atributo {
+    height: 20px;
+
+    background-color: #1a1a1a;
+}
+
+.barra-preenchimento {
+    height: 100%;
+    background-color: #969696;
+}
+
+.linha-ataque .atributo-nome,
+.linha-ataque .atributo-valor,
+.linha-defesa .atributo-nome,
+.linha-defesa .atributo-valor,
+.linha-velocidade .atributo-nome,
+.linha-velocidade .atributo-valor,
+.linha-especial .atributo-nome,
+.linha-especial .atributo-valor{
+    color: #f1f1f1;
+}
+
+.ataque{
+    width: 80%;
+}
+
+.defesa{
+    width: 70%;
+}
+
+.velocidade{
+    width: 90%;
+}
+
+.especial{
+    width: 20%;
+}
+
 
 /* TELA DE CONFIRMAÇÃO */
