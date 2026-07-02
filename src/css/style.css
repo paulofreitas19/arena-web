@@ -366,5 +366,33 @@ body {
     width: 20%;
 }
 
-
 /* TELA DE CONFIRMAÇÃO */
+
+/* TELA DE BATALHA */
+
+.tela-batalha{
+    width: 100%;
+    max-width: 1400px;
+    min-height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+/* é o conteudo geral da tela,
+todos os elementos internos
+que a compõe: 
+titulo, combatentes, log de batalha, botoes de ação */
+.conteudo-batalha{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: 20px;
+}
+
+/* TELA DE BATALHA */
