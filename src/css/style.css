@@ -395,6 +395,28 @@ titulo, combatentes, log de batalha, botoes de ação */
     gap: 20px;
 }
 
+/* titulo principal da tela de batalha */
+.titulo-batalha{
+    /* font-family: ; */
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+
+    text-align: center;
+}
+
+/* dentro dessa div está o card do jogador, o vs e o card do inimigo */
+.area-combatentes{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 35px;
+}
+
+
 
 
 /* TELA DE BATALHA */
