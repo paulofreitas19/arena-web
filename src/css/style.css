@@ -416,6 +416,58 @@ titulo, combatentes, log de batalha, botoes de ação */
     gap: 35px;
 }
 
+/* classe base para o cartão dos combatentes */
+.card-combatente{
+    width: 42%;
+    
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 28px;
+
+    padding: 20px;
+    background-color: #202020;
+    border: 2px solid #fff;
+    box-shadow: 0 18px 20px #f1f1f1;
+
+    clip-path: polygon(
+        5% 0,
+        95% 0,
+        100% 12%,
+        100% 88%,
+        95% 100%,
+        5% 100%,
+        0 88%,
+        0 12%
+    );
+}
+
+/* card do jogador com destaque azul */
+.card-combatente.jogador{
+    border-color: #1e88ff;
+    box-shadow: 0 0 18px rgba(30, 136, 255, 0.35);
+}
+
+/* card do inimigo com destaque vermelho */
+.card-combatente.inimigo{
+    border-color: #d63b3b;
+    box-shadow: 0 0 18px rgba(214, 59, 59, 0.35);
+}
+
+/* div da imagem do combatente */
+.imagem-combatente{
+    width: 400px;
+    height: 400px;
+}
+
+.imagem-combatente img{
+    object-fit: contain;
+    height: 350px;
+}
+
+
+
+
 
 
 
