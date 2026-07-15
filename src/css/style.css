@@ -459,21 +459,43 @@ titulo, combatentes, log de batalha, botoes de ação */
 /* div da imagem do combatente */
 .imagem-combatente{
     position: absolute;
-    background-image: url('../img/yakuza-portrait.png');
     height: 50%;
     width: 100%;
 }
 
-.imagem-combatente img{
-    object-fit: contain;
-    height: 300px;
-    border-radius: 100px;
+.imagem-combatente.jogador{
+    background-image: url('../img/yakuza-portrait.png');
 }
 
+.imagem-combatente.inimigo{
+    background-image: url('../img/agent-portrait.png');
+}
 
+.informacoes-combatente{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 260px;
+    text-align: center;
+    gap: 10px;
+}
 
+.tipo-combatente{
+    letter-spacing: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+    padding-bottom: 4px;
+}
 
+.tipo-combatente.jogador{
+    color: #1e88ff;
+    border-bottom: 2px solid #1e88ff;  
+}
 
-
+.tipo-combatente.inimigo{
+    color: #d63b3b;
+    border-bottom: 2px solid #d63b3b; 
+}
 
 /* TELA DE BATALHA */
